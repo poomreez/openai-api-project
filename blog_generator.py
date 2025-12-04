@@ -1,10 +1,9 @@
-# Generate a Blog with OpenAI 📝
 import openai
 from dotenv import dotenv_values
 
 config = dotenv_values('.env')
 
-openai.api_key = config['sk-...c98A']
+openai.api_key = config['API_KEY']
 
 def generate_blog(paragraph_topic):
   response = openai.completions.create(
